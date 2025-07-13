@@ -1,8 +1,8 @@
 <img width="1216" height="532" alt="Kanban" src="https://github.com/user-attachments/assets/45562dbf-007b-4dd6-8f77-4dccfa771b3e" />
 
-# Kanban Board - Gestão Ágil de Tarefas
+# Kanban - Gestão Ágil de Tarefas
 
-O Kanban Board é uma aplicação web interativa desenvolvida para gerenciamento visual de tarefas utilizando o método Kanban. Esta solução full-stack combina um frontend dinâmico com jQuery e Bootstrap com um sistema de persistência local robusto, oferecendo aos usuários uma ferramenta intuitiva para organização pessoal ou de equipe.
+O Kanban é uma aplicação web interativa desenvolvida para gerenciamento visual de tarefas utilizando o método Kanban. Esta solução combina um frontend dinâmico com jQuery e Bootstrap com um sistema de persistência local robusto, oferecendo aos usuários uma ferramenta intuitiva para organização pessoal.
 
 A aplicação destaca-se por sua simplicidade e eficiência, permitindo arrastar e soltar cards entre colunas (To Do, Doing, Done) com persistência automática no navegador. O design responsivo garante usabilidade perfeita em qualquer dispositivo.
 
@@ -23,7 +23,6 @@ A aplicação destaca-se por sua simplicidade e eficiência, permitindo arrastar
 - jQuery 3.6 + jQuery UI
 - Bootstrap 5
 - HTML5 + CSS3
-- Font Awesome (opcional, para ícones)
 
 ## Roadmap
 - Implementação do drag-and-drop básico (Done)
