@@ -1,0 +1,73 @@
+/* Layout Principal */
+.container {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.kanban-column {
+  min-height: 400px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Áreas de Drop */
+.task-list {
+  min-height: 300px;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  border: 2px dashed #e0e0e0;
+  transition: all 0.3s;
+}
+
+/* Cards */
+.task-card {
+  cursor: grab;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.task-card:active {
+  cursor: grabbing;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Efeitos durante arrasto */
+.ui-draggable-dragging {
+  z-index: 1000;
+  transform: rotate(3deg) scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.ui-droppable-active {
+  background-color: #f0f7ff;
+  border-color: #4a90e2;
+}
+
+/* Botões */
+.delete-task {
+  padding: 0 5px;
+  line-height: 1;
+  font-size: 12px;
+}
+
+.add-task-btn {
+  white-space: nowrap;
+}
+
+/* Inputs */
+.new-task-input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.add-task-btn {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
