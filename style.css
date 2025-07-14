@@ -71,3 +71,33 @@
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode-column {
+  background: #1e1e1e !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode-task-list {
+  background: #2d2d2d !important;
+  border-color: #444 !important;
+}
+
+/* Mantendo os efeitos de drag durante o dark mode */
+body.dark-mode .ui-droppable-active {
+  background-color: #1a3a5a !important;
+  border-color: #4a90e2 !important;
+}
+
+body.dark-mode .task-card:active {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .ui-draggable-dragging {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}

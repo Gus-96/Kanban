@@ -1,4 +1,34 @@
 $(document).ready(function() {
+   // Configuração do Dark Mode
+  function setDarkMode(isDark) {
+    if (isDark) {
+      $('body').addClass('dark-mode');
+      $('.kanban-column').addClass('dark-mode-column');
+      $('.task-list').addClass('dark-mode-task-list');
+      $('.task-card').addClass('dark-mode-task-card');
+      $('.new-task-input').addClass('dark-mode-input');
+      $('#darkModeToggle').html('<i class="fas fa-sun"></i> Light Mode');
+    } else {
+      $('body').removeClass('dark-mode');
+      $('.kanban-column').removeClass('dark-mode-column');
+      $('.task-list').removeClass('dark-mode-task-list');
+      $('.task-card').removeClass('dark-mode-task-card');
+      $('.new-task-input').removeClass('dark-mode-input');
+      $('#darkModeToggle').html('<i class="fas fa-moon"></i> Dark Mode');
+    }
+    localStorage.setItem('kanban-dark-mode', isDark);
+  }
+
+  // Inicializar dark mode (padrão: dark, mas verifica localStorage)
+  const prefersDark = localStorage.getItem('kanban-dark-mode') !== 'false';
+  setDarkMode(prefersDark);
+
+  // Alternar dark/light mode
+  $('#darkModeToggle').click(function() {
+    const isDark = !$('body').hasClass('dark-mode');
+    setDarkMode(isDark);
+  });
+
   // Limpar storage antigo se existir
   if (localStorage.getItem('kanban-tasks')?.includes('task-card')) {
     localStorage.removeItem('kanban-tasks');
