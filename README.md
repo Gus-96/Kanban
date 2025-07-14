@@ -6,7 +6,12 @@ O Kanban é uma aplicação web interativa desenvolvida para gerenciamento visua
 
 A aplicação destaca-se por sua simplicidade e eficiência, permitindo arrastar e soltar cards entre colunas (To Do, Doing, Done) com persistência automática no navegador. O design responsivo garante usabilidade perfeita em qualquer dispositivo.
 
-## Funcionalidades Principais
+### Tecnologias Utilizadas
+- jQuery 3.6 + jQuery UI
+- Bootstrap 5
+- HTML5 + CSS3
+
+### Funcionalidades Principais
 - **Arrastar e soltar intuitivo** de cards entre colunas
 - **Persistência automática** no localStorage do navegador
 - **Adição rápida** de tarefas em qualquer coluna
@@ -19,12 +24,7 @@ A aplicação destaca-se por sua simplicidade e eficiência, permitindo arrastar
 - **Migração automática** de versões antigas
 - **Gestão de estado** eficiente
 
-## Tecnologias Utilizadas
-- jQuery 3.6 + jQuery UI
-- Bootstrap 5
-- HTML5 + CSS3
-
-## Roadmap
+### Roadmap
 - Implementação do drag-and-drop básico (Done)
 - Persistência no localStorage (Done)
 - Adição de tarefas em múltiplas colunas (Done)
