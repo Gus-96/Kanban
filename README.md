@@ -1,4 +1,4 @@
-<img width="1216" height="532" alt="Kanban" src="https://github.com/user-attachments/assets/45562dbf-007b-4dd6-8f77-4dccfa771b3e" />
+<img width="1193" height="559" alt="Kanban" src="https://github.com/user-attachments/assets/25c2d5cb-2d31-4dd4-a491-6eb6dae675e9" />
 
 # Kanban - Gestão Ágil de Tarefas
 
@@ -28,7 +28,7 @@ A aplicação destaca-se por sua simplicidade e eficiência, permitindo arrastar
 - Implementação do drag-and-drop básico (Done)
 - Persistência no localStorage (Done)
 - Adição de tarefas em múltiplas colunas (Done)
-- Dark Mode (To Do)
+- Dark Mode (Done)
 - Edição de tarefas existentes (To Do)
 - Sistema de login multi-usuário (To Do)
 - Backup em nuvem (To Do)
