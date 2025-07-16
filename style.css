@@ -1,22 +1,23 @@
 /* Layout Principal */
 .container {
   max-width: 1200px;
-  padding: 20px;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .kanban-column {
-  min-height: 400px;
+  min-height: 300px;
   background: #f8f9fa;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 12px;
+  margin-bottom: 15px;
 }
 
 /* Áreas de Drop */
 .task-list {
-  min-height: 300px;
-  padding: 10px;
+  min-height: 200px;
+  padding: 8px;
   background: white;
   border-radius: 5px;
   border: 2px dashed #e0e0e0;
@@ -26,9 +27,11 @@
 /* Cards */
 .task-card {
   cursor: grab;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   transition: all 0.2s;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .task-card:active {
@@ -51,14 +54,24 @@
 }
 
 /* Botões */
-.delete-task {
-  padding: 0 5px;
+.delete-task, .move-task {
+  padding: 5px;
   line-height: 1;
-  font-size: 12px;
+  min-width: 30px;
+}
+
+.delete-task {
+  font-size: 20px;
+}
+
+.move-task {
+  font-size: 25px;
+  display: none;
 }
 
 .add-task-btn {
   white-space: nowrap;
+  min-width: 40px;
 }
 
 /* Inputs */
@@ -78,20 +91,20 @@ body.dark-mode {
   color: #e0e0e0;
 }
 
-.dark-mode-column {
-  background: #1e1e1e !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+body.dark-mode .kanban-column {
+  background: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.dark-mode-task-list {
-  background: #2d2d2d !important;
-  border-color: #444 !important;
+body.dark-mode .task-list {
+  background: #2d2d2d;
+  border-color: #444;
 }
 
-/* Mantendo os efeitos de drag durante o dark mode */
+/* Efeitos de drag durante o dark mode */
 body.dark-mode .ui-droppable-active {
-  background-color: #1a3a5a !important;
-  border-color: #4a90e2 !important;
+  background-color: #1a3a5a;
+  border-color: #4a90e2;
 }
 
 body.dark-mode .task-card:active {
@@ -100,4 +113,152 @@ body.dark-mode .task-card:active {
 
 body.dark-mode .ui-draggable-dragging {
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Header styles - Atualizado para centralização perfeita */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.page-title {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: max-content;
+}
+
+/* Dark Mode Toggle - Estilos atualizados */
+#darkModeToggle {
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  z-index: 1;
+  margin-left: auto;
+}
+
+#darkModeToggle:active, 
+#darkModeToggle:focus {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode #darkModeToggle {
+  background: transparent;
+}
+
+#darkModeToggle i {
+  margin-right: 0;
+  display: inline-block;
+  transition: color 0.3s, transform 0.2s;
+}
+
+/* Ícone da lua (modo claro) */
+#darkModeToggle i.fa-moon {
+  color: #6c757d;
+}
+
+/* Ícone do sol (modo escuro) */
+body.dark-mode #darkModeToggle i.fa-sun {
+  color: #ffc107;
+}
+
+/* Efeitos de interação */
+#darkModeToggle:hover i {
+  color: #495057;
+}
+
+body.dark-mode #darkModeToggle:hover i {
+  color: #ffd700;
+}
+
+#darkModeToggle:active i {
+  transform: scale(0.9);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .kanban-column {
+    min-height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  .task-list {
+    min-height: 150px;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .task-card {
+    font-size: 0.9rem;
+    cursor: default;
+  }
+  
+  .task-card.ui-draggable-dragging {
+    transform: none;
+  }
+  
+  .new-task-input {
+    font-size: 0.9rem;
+  }
+  
+  .add-task-btn {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .move-task {
+    display: inline-block;
+  }
+  
+  .ui-draggable-handle {
+    touch-action: auto;
+  }
+}
+
+@media (max-width: 200px) {
+  .header-container {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  
+  .page-title {
+    position: static;
+    transform: none;
+    left: auto;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+    order: -1;
+  }
+  
+  #darkModeToggle {
+    margin-left: 0;
+    padding: 0.25rem;
+  }
+  
+  #darkModeToggle span {
+    display: none;
+  }
+}
+
+.modal-body {
+  background-color: #1e1e1e;
+}
+
+p {
+  color: #FFF;
+  text-align: center;
 }

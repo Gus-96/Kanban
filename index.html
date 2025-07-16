@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kanban</title>
   <link rel="icon" href="icon.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -9,44 +10,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <div class="container mt-5">
-    <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">
-      <i class="fas fa-moon"></i> Dark Mode
-    </button>
-    <h1 class="text-center mb-4">Kanban</h1>
+  <div class="container mt-3 mt-md-5">
+    <div class="header-container">
+      <h1 class="page-title">Kanban</h1>
+      <button id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
     <div class="row">
       <!-- Coluna To Do -->
-      <div class="col-md-4">
-        <div class="kanban-column p-3">
+      <div class="col-12 col-md-4 mb-3 mb-md-0">
+        <div class="kanban-column p-2 p-md-3">
           <h5 class="text-center">📋 To Do</h5>
           <div id="to-do" class="task-list"></div>
           <div class="input-group mt-2">
             <input type="text" class="form-control new-task-input" data-column="to-do" placeholder="Nova tarefa...">
-            <button class="btn btn-primary add-task-btn" data-column="to-do">Adicionar</button>
+            <button class="btn btn-primary add-task-btn" data-column="to-do">+</button>
           </div>
         </div>
       </div>
 
       <!-- Coluna Doing -->
-      <div class="col-md-4">
-        <div class="kanban-column p-3">
+      <div class="col-12 col-md-4 mb-3 mb-md-0">
+        <div class="kanban-column p-2 p-md-3">
           <h5 class="text-center">🚀 Doing</h5>
           <div id="doing" class="task-list"></div>
           <div class="input-group mt-2">
             <input type="text" class="form-control new-task-input" data-column="doing" placeholder="Nova tarefa...">
-            <button class="btn btn-primary add-task-btn" data-column="doing">Adicionar</button>
+            <button class="btn btn-primary add-task-btn" data-column="doing">+</button>
           </div>
         </div>
       </div>
 
       <!-- Coluna Done -->
-      <div class="col-md-4">
-        <div class="kanban-column p-3">
+      <div class="col-12 col-md-4">
+        <div class="kanban-column p-2 p-md-3">
           <h5 class="text-center">✅ Done</h5>
           <div id="done" class="task-list"></div>
           <div class="input-group mt-2">
             <input type="text" class="form-control new-task-input" data-column="done" placeholder="Nova tarefa...">
-            <button class="btn btn-primary add-task-btn" data-column="done">Adicionar</button>
+            <button class="btn btn-primary add-task-btn" data-column="done">+</button>
           </div>
         </div>
       </div>
