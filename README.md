@@ -1,4 +1,4 @@
-<img width="1206" height="550" alt="Captura de Tela 2025-07-17 às 14 06 12" src="https://github.com/user-attachments/assets/71926830-bf03-4d14-957b-427a527ad715" />
+<img width="1207" height="413" alt="Captura de Tela 2025-07-17 às 14 13 50" src="https://github.com/user-attachments/assets/9423d974-89e2-4b04-b4cc-91bbd0c9f49b" />
 
 # Kanban - Gestão Ágil de Tarefas
 
